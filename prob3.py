@@ -1,14 +1,13 @@
 def max(lst, lmbda):
-    max = lst[0]
+    max_num = lst[0]
 
     for n in lst:
-        if lmbda(n, max) > 0:
-            max = n
+        max_num = lmbda(max_num,n)
     
-    return max
+    return max_num
 
 
-lst = [5,10,20,15,1,100]
+lst = [5,100,20,15,1,2]
 
 comp = lambda x, y: x if x > y else y
 
